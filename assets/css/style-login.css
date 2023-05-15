@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    cursor: default;
+	font-family: 'Roboto',sans-serif;
+}
+body:hover{
+    transition: 1s;
+}
+center p{
+    position: relative;
+    z-index: 1000;
+    color: #fff;
+    line-height: 30px;
+}
+header{
+    width: 500px;
+    height: auto;
+    background: rgb(238, 234, 226);
+    position: relative;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    display: grid;
+    margin-top: 300px;
+}
+header img{
+    position: sticky;
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.head{
+    font-family: 'FZShuTi';
+    line-height: 60px;
+    font-size: 30px;
+}
+.kotak{
+    position: relative;
+}
+.kotak hr{
+    margin-bottom: 20px;
+}
+.kotak ul li input{
+    font-size: 12px;
+    border: 1px solid rgb(180, 176, 169);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-family: inherit;
+    margin-bottom: 1rem;
+    background: rgb(238, 234, 226);
+}
+.kotak ul li a{
+    font-size: 13px;
+    color: black;
+}
+.kotak ul li a:hover{
+    border-bottom: 1px solid;
+}
+.login{
+    cursor: pointer;
+    font-size: 14px;
+    border: 1px solid #d1d3e2;
+    padding: 10px 72px;
+    border-radius: 20px;
+    font-family: inherit;
+    margin-bottom: 1rem;
+    background: rgb(232, 181, 127);
+    transition: ease-out .1s;
+}
+.login:hover{
+    background: rgb(251, 203, 152);
+}
+.wall{
+    background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/334c032a-ba05-4782-96f1-886690f6018d/dd29mju-3c5c2c16-5733-4155-9c32-0f6f2b92f864.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzNGMwMzJhLWJhMDUtNDc4Mi05NmYxLTg4NjY5MGY2MDE4ZFwvZGQyOW1qdS0zYzVjMmMxNi01NzMzLTQxNTUtOWMzMi0wZjZmMmI5MmY4NjQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.nPqw65yXe30GbLbKRCucPAyl3cs0AiW8homeFKpnliQ) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.wall:hover{
+    transition: all 1s ease;
+}
+.walls{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.619);
+}
+.notif{
+    top: 0;
+    background-color: #f8d7da;
+    width: 100%;
+    z-index: 10;
+    color: #842029;
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    font-size: 20px;
+}
+.notif i{
+    margin-right: 10px;
+}

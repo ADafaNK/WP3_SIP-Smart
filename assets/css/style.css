@@ -1,0 +1,622 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    cursor: default;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+}
+#check{
+    display: none;
+}
+
+/* ======================================= */
+#btn{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 6px black;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0);
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ label #btn{
+    width: 300px;
+    color: #201c1500;
+    text-shadow: none;
+    box-shadow: none;
+}
+#check:checked ~ .sidebar .user{
+    left: 0;
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ .sidebar ul li{
+    margin-left: 20px;
+}
+label #cancel{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	z-index: 3;
+	position: fixed;
+}
+#check:checked ~ label #cancel{
+	left: 0;
+	display: block;
+}
+.sidebar{
+	z-index: 4;
+	position: fixed;
+	width: 300px;
+    left: -300px;
+	height: 100%;
+	background: #fff;
+	transition: .2s ease-in;
+}
+.sidebar img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+.sidebar ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sidebar ul li a{
+	font-size: 15px;
+    color: #201c15;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 210, 210);
+    transition: .2s;
+    padding: 10px 20px;
+    display: flex;
+}
+.sidebar-bg{
+    background: url(https://img.freepik.com/free-photo/jasmine-rice_74190-7259.jpg?w=1380&t=st=1668355327~exp=1668355927~hmac=c962656fe6fa0c512a165908e1aee5cdd3c25eca21c37c4ecdad10b9975b6a5d);
+    background-size: cover;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 0;
+    left: 0;
+}
+.sidebar-bgs{
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.481);
+}
+.sidebar #b1{
+    transition: all ease-in 0.4s;
+}
+.sidebar #b2{
+    transition: all ease-in 0.7s;
+}
+.sidebar #b3{
+    transition: all ease-in 1s;
+}
+.sidebar #b4{
+    transition: all ease-in 1.3s;
+}
+.sidebar #b5{
+    transition: all ease-in 1.6s;
+}
+.sidebar a:hover{
+    background: rgb(238, 234, 226);
+	margin-left: 5px;
+}
+.user{
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.user .nama{
+    font-size: 20px;
+	margin-top: 15px;
+	font-weight: bold;
+}
+.user i{
+    padding: 10px 0px;
+    font-size: 50px;
+}
+.user .id{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+/* ======================================= */
+.head{
+    padding-inline: 10%;
+    display: flex;
+    justify-content: center;
+}
+.header{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'consolas';
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    transition: 0.6s;
+    padding: 50px 0px;
+}
+.header img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+}
+.header.bar{
+    padding: 25px 0px;
+    background-color: #1a1a1aab;
+    color: white;
+}
+.header.bar h2,
+.header.bar ul li a{
+    color: #ffffff;
+    transition: 0s;
+}
+.header.bar h2,
+.header.bar ul li a:hover{
+    color: #fff;
+}
+.header h2{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.6s;
+    text-transform: uppercase;
+    padding-left: 100px;
+}
+.header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header ul li{
+    position: relative;
+    list-style: none;
+}
+.header ul li a{
+    margin-inline: 5px;
+    padding: 20px 20px;
+    position: relative;
+    text-decoration: none;
+    color: #ebebeb;
+    letter-spacing: 2px;
+    transition: 0s;
+}
+.header ul li #tombol:hover{
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgb(150, 209, 55);
+}
+.header span{
+    background-color: #ba4646;
+    border-radius: 20px;
+    padding: 20px;
+    user-select: none;
+    transition: 0.6s;
+}
+.header.bar span{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+#checklogout{
+    display: none;
+}
+.labellogout{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: -10%;
+    color: #fff;
+    padding: 55px 0px;
+    transition: 0.6s;
+    opacity: 4;
+}
+.header ul li .labellogout a{
+    color: white;
+}
+.labellogout a{
+    background: rgba(170, 23, 23, 0.637);
+    border-radius: 50%;
+}
+.header.bar .labellogout{
+    padding: 28px 0px;
+    color: white;
+}
+#checklogout:checked ~ label .labellogout{
+    top: 0;
+    right: 100px;
+}
+#checklogout:checked ~ label .labellogout a:hover{
+    background-color: #571b1b;
+    border: 5px solid #ba4646;
+    margin: 0;
+}
+#back{
+    right: 2%;
+    bottom: 2%;
+    position: fixed;
+    font-size: 20px;
+    color: black;
+    justify-content: center;
+    line-height: 100px;
+    display: grid;
+    transition: .5s ease-in-out;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: rgb(150, 209, 55);
+    opacity: 0;
+}
+#back i
+{
+    padding: 20px 24px;
+    transition: 0.2s;
+}
+#back i:hover{
+    transform: translateY(-5px);
+}
+.header.bar #back{
+    z-index: 5;
+    opacity: 1;
+    transition: .5s;
+}
+/* ======================================= */
+  .slider{
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 1000px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slidee{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slidee img{
+    width: 100%;
+    height: 1000px;
+  }
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+  
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+  
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+  
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+  
+.blur{
+    color: #f5f4f6;
+    display: grid;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 1000px;
+    background: rgba(0, 0, 0, 0.493);
+}
+.sliders h1{
+    position: relative;
+    color: #ffffff;
+    font-family: "Poppins", Sans-serif;
+    font-size: 78px;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: -1.9px;
+    margin-top: -200px;
+    margin-left: 10%;
+    text-shadow: 0px 0px 10px black;
+}
+
+.sliders #btn1{
+    left: 10%;
+    top: 500px;
+    color: #fff;
+    background: none;
+    border: 2px solid rgb(150, 209, 55);
+    font-family: "montserrat",sans-serif;
+    padding: 12px 20px;
+    width: 150px;
+    margin: 10px 0px 10px 20px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: absolute;
+    font-size: 17px;
+    z-index: 3;
+    text-align: center;
+}
+.sliders #btn1:hover{
+    color: #000000;
+}
+.sliders #btn1::before{
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(150, 209, 55);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.sliders #btn1::before{
+  transform: scaleX(0);
+}
+.sliders #btn1:hover::before{
+  transform: scaleX(1);
+}
+
+/* ======================================= */
+.bg-btn-info{
+    padding-top: 50px;
+    height: max-content;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    .penghias,
+    kiri,
+    kanan{
+        position: relative;
+        background: rgb(150, 209, 55);
+        width: 200px;
+        height: 50px;
+    }
+}
+.btn-info{
+    margin-top: -352px;
+    align-items: center;
+    justify-content: center;
+}
+#box p{
+    font-family: "Poppins", Sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #eeeeee;
+    padding: 35px 0px;
+    text-align: center;
+}
+.btn-info #box{
+    display: grid;
+    margin-inline: 20px;
+    width: 350px;
+    height: 300px;
+    background-color: #1b1b1b;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.btn-info #box:hover{
+    margin-bottom: -10px;
+    background-color: rgb(150, 209, 55);
+    box-shadow: 0px 7px 1000px black;
+}
+.btn-info #box img{
+    margin-top: 15px;
+    width: 150px;
+    height: 80px;
+    border-radius: 7px;
+}
+
+/* ======================================= */
+.s1{
+    background: rgba(0, 0, 0, 0);
+    align-items: center;
+    width: 100%;
+    height: 800px;
+    display: grid;
+    width: 100%;
+    height: 800px;
+    transition: ease 2s;
+}
+.slide1{
+    display: flex;
+    align-items: center;
+    font-family: 'StrongSword_New';
+    font-size: 30px;
+    position: absolute;
+    margin-inline: 20%;
+}
+.slide1 img{
+    width: 350px;
+    border-radius: 10px;
+    transition: .2s;
+}
+.dp1{
+    display: block;
+    margin-left: 100px;
+    color: #fff;
+}
+.dp1 header{
+    color: #201c15;
+    font-family: 'Maiandra GD';
+    letter-spacing: -1px;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-left: 20px;
+    line-height: 2;
+}
+.dp1 p{
+    color: #201c15;
+    text-align: justify;
+    font-size: 25px;
+    font-family: Arial;
+}
+.dp1 a{
+    font-size: 18px;
+    font-weight: 700;
+    float: right;
+    margin-top: 30px;
+    line-height: 16px;
+    padding: 20px 40px;
+    width: max-content;
+    letter-spacing: -0.5px;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgb(150, 209, 55);
+    display: flex;
+    align-items: center;
+}
+.dp1 a:hover{
+    background-color: rgb(150, 209, 55);
+}
+.dp1 a p{
+    margin-left: 14px;
+    transform: translate3d(0, -2px, 0) skewX(130deg);
+    width: 60px;
+    height: 7px;
+    background-color: transparent;
+    border-left: 2px solid #000000;
+    border-bottom: 1px solid #000000;
+    margin-right: 10px;
+}
+.dp1 a .more{
+    color: #000000;
+    font-family: 'consolas';
+    font-size: 20px;
+}
+
+/* ======================================= */
+#pertanian{
+    align-items: center;
+    display: grid;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 800px;
+    transition: ease 2s;
+}
+.pertanian{
+    display: flex;
+    font-family: 'StrongSword_New';
+    font-size: 30px;
+    position: absolute;
+    margin-inline: 20%;
+    align-items: center;
+}
+.pertanian img{
+    width: 400px;
+    border-radius: 10px;
+}
+.pengertian{
+    margin-left: 100px;
+    display: block;
+}
+.pengertian header{
+    font-family: 'Maiandra GD';
+    letter-spacing: -1px;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-left: 20px;
+    line-height: 2;
+    color: #201c15;
+}
+.pengertian p{
+    text-align: justify;
+    color: #201c15;
+}
+
+/* ======================================= */
+.footer{
+    border-top: black 1px solid;
+    text-align: center;
+}
+.footer-address{
+    color: rgb(207, 207, 207);
+}
+.footer-address a{
+    color: white;
+    transition: ease-out .1s;
+}
+.footer-address a:hover{
+    color: black;
+}
+
+/* ======================================= */
+.logo-icon{
+    z-index: 1;
+    margin-top: 30px;
+}
+.logo-icon i{
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background-color: rgb(43, 43, 43);
+    box-shadow: 2px 2px 4px black;
+}
+.logo-ig i{
+    color: rgb(190, 190, 190);
+    font-size: 30px; 
+    margin-right: 20px;
+}
+.logo-yt i{
+    color: rgb(228, 228, 228);
+    font-size: 20px;
+}
+.info{
+    position: absolute;
+    background: rgb(92, 92, 92);
+    width: 100%;
+    height: 500px;
+}
+.wall{
+    background: rgb(238, 238, 238);
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.atas{
+    position: relative;
+    z-index: 1001;
+}
